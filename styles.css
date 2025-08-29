@@ -10,10 +10,6 @@ body{
     flex-direction: column;
 }
 
-nav {
-    position:absolute;
-}
-
 main{
     flex-grow: 1;
     display: flex;
@@ -22,7 +18,8 @@ main{
     flex-wrap: wrap;
 }
 
-.image-container {
+/* Styling for Dice Containers - aka color stripes */
+.dice-container {
     margin: 0;
     padding-top:30px;
     padding-bottom:30px;
@@ -38,17 +35,21 @@ main{
     transition-timing-function: ease-in-out;
 }
 
-.image-container img, .image-container svg{
+/* Styling for Dice Images */
+.dice-container svg{
     color: white;
     width: 50%;
     max-width: 460px;
     max-height: 400px;
     aspect-ratio: 1/1;
-    /* fill: rgba(255,255,255, 0.1); */
     fill:white;
     stroke: #070B0D;
+    stroke-linejoin: round;
+    stroke-width: 20px;
 
 }
+
+
 
 .overlay-text {
     color: white;
@@ -59,16 +60,20 @@ main{
     transition-timing-function: ease-in-out;
 }
 
-.image-container span{
+.dice-container span{
     color: transparent;
     transition: color 0.5s;
     transition-timing-function: ease-in-out;
 }
 
+/* Gets rid of ugly selection box around result when clicking */
 .overlay-text::selection{
     background-color: transparent;
 }
 
+
+
+/* Background Colors for each dice container */
 #d20-container{
     background-color: #2F4858;
 }
